@@ -1,0 +1,302 @@
+<html>
+<head>
+<style>
+ /* Style the Image Used to Trigger the Modal */
+.myImg {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.myImg:hover {opacity: 0.7;}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (Image) */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+/* Caption of Modal Image (Image Text) - Same Width as the Image */
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+/* Add Animation - Zoom in the Modal */
+.modal-content, #caption {
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)}
+    to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+    from {transform:scale(0)}
+    to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+    .modal-content {
+        width: 100%;
+    }
+}
+</style>
+</head>
+<body>
+ <!-- Trigger the Modal -->
+
+ <img class="myImg" src="https://www.w3schools.com/howto/img_fjords.jpg" alt="Trolltunga, Norway" width="300" height="200">
+
+ <div class="field field-name-field-blueprint field-type-image field-label-hidden">
+     <div class="field-items">
+         <div class="myImg field-item even active">
+             <a href="http://api.o6144513180.v4.s1.chi.boa.io/sites/api.o6144513180.v4.s1.chi.boa.io/files/property_blueprints/blueprint_2.jpg"
+                rel="lightbox[field_blueprint][]" title="" class="lightbox-processed">
+                 <img typeof="foaf:Image"
+                      src="http://api.o6144513180.v4.s1.chi.boa.io/sites/api.o6144513180.v4.s1.chi.boa.io/files/property_blueprints/blueprint_2.jpg"
+                      width="247" height="135" alt="">
+             </a>
+         </div>
+         <div class="myImg field-item odd">
+             <a href="http://api.o6144513180.v4.s1.chi.boa.io/sites/api.o6144513180.v4.s1.chi.boa.io/files/property_blueprints/depositphotos_11513959-stock-illustration-urban-blueprint-with-a-3d.jpg"
+                rel="lightbox[field_blueprint][]" title="" class="lightbox-processed">
+                 <img typeof="foaf:Image"
+                      src="http://api.o6144513180.v4.s1.chi.boa.io/sites/api.o6144513180.v4.s1.chi.boa.io/files/property_blueprints/depositphotos_11513959-stock-illustration-urban-blueprint-with-a-3d.jpg"
+                      width="1024" height="1024" alt="">
+             </a>
+         </div>
+         <div class="myImg field-item even">
+             <a href="http://api.o6144513180.v4.s1.chi.boa.io/sites/api.o6144513180.v4.s1.chi.boa.io/files/property_blueprints/architectural-background-with-a-3d-building-model-vector-clip-art-kKLS3w-clipart.jpg"
+                rel="lightbox[field_blueprint][]" title="" class="lightbox-processed">
+                 <img typeof="foaf:Image"
+                      src="http://api.o6144513180.v4.s1.chi.boa.io/sites/api.o6144513180.v4.s1.chi.boa.io/files/property_blueprints/architectural-background-with-a-3d-building-model-vector-clip-art-kKLS3w-clipart.jpg"
+                      width="450" height="470" alt="">
+             </a>
+         </div>
+         <div class="myImg field-item odd">
+             <a href="http://api.o6144513180.v4.s1.chi.boa.io/sites/api.o6144513180.v4.s1.chi.boa.io/files/property_blueprints/blueprint_2_2.jpg"
+                rel="lightbox[field_blueprint][]" title="" class="lightbox-processed">
+                 <img typeof="foaf:Image"
+                      src="http://api.o6144513180.v4.s1.chi.boa.io/sites/api.o6144513180.v4.s1.chi.boa.io/files/property_blueprints/blueprint_2_2.jpg"
+                      width="247" height="135" alt="">
+             </a>
+         </div>
+         <div class="myImg field-item even">
+             <a href="http://api.o6144513180.v4.s1.chi.boa.io/sites/api.o6144513180.v4.s1.chi.boa.io/files/property_blueprints/depositphotos_11513959-stock-illustration-urban-blueprint-with-a-3d_0.jpg"
+                rel="lightbox[field_blueprint][]" title="" class="lightbox-processed">
+                 <img typeof="foaf:Image"
+                      src="http://api.o6144513180.v4.s1.chi.boa.io/sites/api.o6144513180.v4.s1.chi.boa.io/files/property_blueprints/depositphotos_11513959-stock-illustration-urban-blueprint-with-a-3d_0.jpg"
+                      width="1024" height="1024" alt="">
+             </a>
+         </div>
+     </div>
+ </div>
+
+
+ <!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- The Close Button -->
+  <span class="close" onclick="document.getElementById('myModal').style.display='none'">&times;</span>
+
+  <!-- Modal Content (The Image) -->
+  <img class="modal-content" id="img01">
+
+  <!-- Modal Caption (Image Text) -->
+  <div id="caption"></div>
+</div>
+
+ <script type="text/javascript" src="http://dev.api.o6144513180.v4.s1.chi.boa.io/sites/all/modules/jquery_update/replace/jquery/1.10/jquery.min.js?v=1.10.2"></script>
+ <script type="text/javascript" src="jquery.event.move.js"></script>
+ <script type="text/javascript" src="jquery.event.swipe.js"></script>
+
+<script>
+    $(document).ready(function(){
+        // Get the modal
+        var modal = $('#myModal');
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+        var $imgs = $('.field-item img');
+        var modalImg = $("#img01");
+        var captionText = $("#caption");
+        $imgs.on('click', function(e){
+            modal.show();
+            modalImg.attr('src',$(this).attr('src'));
+            captionText.html($(this).attr('alt'));
+            return false;
+        })
+
+        $imgs.on('swipeleft', function(e){
+alert('swipe left')
+        })
+
+        $imgs.on('swiperight', function(e){
+alert('swipe right')
+        })
+
+        $('.close').on('click', function(){
+            modal.hide();
+        })
+    })
+
+
+</script>
+
+ <script>
+    /* (function(jQuery, undefined) {
+         jQuery(document).ready(function() {
+             var wrap = jQuery('.field-items'),
+                     slides = wrap.find('.field-items img'),
+                     active = slides.filter('.active'),
+                     i = slides.index(active),
+                     width = wrap.width();
+
+             // Listen for swipe events on slides, and use a custom 'activate'
+             // event to add and remove the class 'active' to the previous
+             // or next slide, and to keep the index up-to-date. The class
+             // 'active' uses CSS transitions to make the slide move.
+
+             slides
+
+                     .on('swipeleft', function(e) {
+                         alert('swipe left')
+                         if (i === slides.length - 1) { return; }
+                         slides.eq(i + 1).trigger('activate');
+                     })
+
+                     .on('swiperight', function(e) {
+                         alert('swipe right')
+                         if (i === 0) { return; }
+                         slides.eq(i - 1).trigger('activate');
+                     })
+
+                     .on('activate', function(e) {
+                         slides.eq(i).removeClass('active');
+
+                         jQuery(e.target).addClass('active');
+
+                         // Update the active slide index
+                         i = slides.index(e.target);
+                     })
+
+                 // The code below handles what happens before any swipe event is triggered.
+                 // It makes the slides demo on this page work nicely, but really doesn't
+                 // have much to do with demonstrating the swipe events themselves. For more
+                 // on move events see:
+                 //
+                 // http://stephband.info/jquery.event.move
+
+                     .on('movestart', function(e) {
+                         // If the movestart heads off in a upwards or downwards
+                         // direction, prevent it so that the browser scrolls normally.
+                         if ((e.distX > e.distY && e.distX < -e.distY) ||
+                                 (e.distX < e.distY && e.distX > -e.distY)) {
+                             e.preventDefault();
+                             return;
+                         }
+
+                         // To allow the slide to keep step with the finger,
+                         // temporarily disable transitions.
+                         wrap.addClass('notransition');
+                     })
+
+                     .on('move', function(e) {
+                         var left = 100 * e.distX / width;
+
+                         // Move slides with the finger
+                         if (e.distX < 0) {
+                             if (slides[i+1]) {
+                                 slides[i].style.left = left + '%';
+                                 slides[i+1].style.left = (left+100)+'%';
+                             }
+                             else {
+                                 slides[i].style.left = left/4 + '%';
+                             }
+                         }
+                         if (e.distX > 0) {
+                             if (slides[i-1]) {
+                                 slides[i].style.left = left + '%';
+                                 slides[i-1].style.left = (left-100)+'%';
+                             }
+                             else {
+                                 slides[i].style.left = left/5 + '%';
+                             }
+                         }
+                     })
+
+                     .on('moveend', function(e) {
+                         wrap.removeClass('notransition');
+
+                         slides[i].style.left = '';
+
+                         if (slides[i+1]) {
+                             slides[i+1].style.left = '';
+                         }
+                         if (slides[i-1]) {
+                             slides[i-1].style.left = '';
+                         }
+                     });
+
+             // Make the buttons work, too. Hijack the id stored in the href and use
+             // it to activate the slide.
+
+             jQuery(document)
+                     .on('click', '.slide_button', function(e) {
+                         var href = e.currentTarget.hash;
+
+                         jQuery(href).trigger('activate');
+
+                         e.preventDefault();
+                     });
+         });
+     })(jQuery);*/
+ </script>
+</body>
+</html>
