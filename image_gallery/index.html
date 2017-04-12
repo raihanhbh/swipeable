@@ -1,302 +1,353 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<style>
- /* Style the Image Used to Trigger the Modal */
-.myImg {
-    border-radius: 5px;
-    cursor: pointer;
-    transition: 0.3s;
-}
+    <script>//document.documentElement.className = 'js';</script>
 
-.myImg:hover {opacity: 0.7;}
+    <link rel="stylesheet" type="text/css" href="template.min.css" />
 
-/* The Modal (background) */
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
-}
 
-/* Modal Content (Image) */
-.modal-content {
-    margin: auto;
-    display: block;
-    width: 80%;
-    max-width: 700px;
-}
+    <style>
+        .field-items,.site_wrap > .slides_wrap {
+            margin-bottom: 1em;
+            margin-left: -8px;
+            margin-right: -8px;
+        }
 
-/* Caption of Modal Image (Image Text) - Same Width as the Image */
-#caption {
-    margin: auto;
-    display: block;
-    width: 80%;
-    max-width: 700px;
-    text-align: center;
-    color: #ccc;
-    padding: 10px 0;
-    height: 150px;
-}
+        .field-items,.img_slides_wrap {
+            width: 784px;
+            border: 8px solid #333333;
+            background-color: #444444;
+            overflow: hidden;
+        }
 
-/* Add Animation - Zoom in the Modal */
-.modal-content, #caption {
-    -webkit-animation-name: zoom;
-    -webkit-animation-duration: 0.6s;
-    animation-name: zoom;
-    animation-duration: 0.6s;
-}
+        .field-item,.img_slide {
+            padding: 0;
+        }
 
-@-webkit-keyframes zoom {
-    from {-webkit-transform:scale(0)}
-    to {-webkit-transform:scale(1)}
-}
+        .field-item,.img_slide {
+            /* Overide template's height transitions. */
+            width: 100%;
+            height: auto;
+        }
 
-@keyframes zoom {
-    from {transform:scale(0)}
-    to {transform:scale(1)}
-}
+        .slide_buttons_index {
+            text-align: center;
+        }
 
-/* The Close Button */
-.close {
-    position: absolute;
-    top: 15px;
-    right: 35px;
-    color: #f1f1f1;
-    font-size: 40px;
-    font-weight: bold;
-    transition: 0.3s;
-}
+        .notransition,
+        .notransition .slide {
+            -webkit-transition-duration: 0 !important;
+            -moz-transition-duration: 0 !important;
+            -ms-transition-duration: 0 !important;
+            transition-duration: 0 !important;
 
-.close:hover,
-.close:focus {
-    color: #bbb;
-    text-decoration: none;
-    cursor: pointer;
-}
+            -webkit-transition-delay: 0 !important;
+            -moz-transition-delay: 0 !important;
+            -ms-transition-delay: 0 !important;
+            transition-delay: 0 !important;
+        }
 
-/* 100% Image Width on Smaller Screens */
-@media only screen and (max-width: 700px){
-    .modal-content {
-        width: 100%;
-    }
-}
-</style>
+        @media screen and (max-width: 640px) {
+            .field-items,.img_slides_wrap {
+                width: 100%;
+
+                -webkit-box-sizing: content-box;
+                -moz-box-sizing: content-box;
+                -ms-box-sizing: content-box;
+                box-sizing: content-box;
+            }
+        }
+    </style>
 </head>
+
 <body>
- <!-- Trigger the Modal -->
 
- <img class="myImg" src="https://www.w3schools.com/howto/img_fjords.jpg" alt="Trolltunga, Norway" width="300" height="200">
-
- <div class="field field-name-field-blueprint field-type-image field-label-hidden">
-     <div class="field-items">
-         <div class="myImg field-item even active">
-             <a href="http://api.o6144513180.v4.s1.chi.boa.io/sites/api.o6144513180.v4.s1.chi.boa.io/files/property_blueprints/blueprint_2.jpg"
-                rel="lightbox[field_blueprint][]" title="" class="lightbox-processed">
-                 <img typeof="foaf:Image"
-                      src="http://api.o6144513180.v4.s1.chi.boa.io/sites/api.o6144513180.v4.s1.chi.boa.io/files/property_blueprints/blueprint_2.jpg"
-                      width="247" height="135" alt="">
-             </a>
-         </div>
-         <div class="myImg field-item odd">
-             <a href="http://api.o6144513180.v4.s1.chi.boa.io/sites/api.o6144513180.v4.s1.chi.boa.io/files/property_blueprints/depositphotos_11513959-stock-illustration-urban-blueprint-with-a-3d.jpg"
-                rel="lightbox[field_blueprint][]" title="" class="lightbox-processed">
-                 <img typeof="foaf:Image"
-                      src="http://api.o6144513180.v4.s1.chi.boa.io/sites/api.o6144513180.v4.s1.chi.boa.io/files/property_blueprints/depositphotos_11513959-stock-illustration-urban-blueprint-with-a-3d.jpg"
-                      width="1024" height="1024" alt="">
-             </a>
-         </div>
-         <div class="myImg field-item even">
-             <a href="http://api.o6144513180.v4.s1.chi.boa.io/sites/api.o6144513180.v4.s1.chi.boa.io/files/property_blueprints/architectural-background-with-a-3d-building-model-vector-clip-art-kKLS3w-clipart.jpg"
-                rel="lightbox[field_blueprint][]" title="" class="lightbox-processed">
-                 <img typeof="foaf:Image"
-                      src="http://api.o6144513180.v4.s1.chi.boa.io/sites/api.o6144513180.v4.s1.chi.boa.io/files/property_blueprints/architectural-background-with-a-3d-building-model-vector-clip-art-kKLS3w-clipart.jpg"
-                      width="450" height="470" alt="">
-             </a>
-         </div>
-         <div class="myImg field-item odd">
-             <a href="http://api.o6144513180.v4.s1.chi.boa.io/sites/api.o6144513180.v4.s1.chi.boa.io/files/property_blueprints/blueprint_2_2.jpg"
-                rel="lightbox[field_blueprint][]" title="" class="lightbox-processed">
-                 <img typeof="foaf:Image"
-                      src="http://api.o6144513180.v4.s1.chi.boa.io/sites/api.o6144513180.v4.s1.chi.boa.io/files/property_blueprints/blueprint_2_2.jpg"
-                      width="247" height="135" alt="">
-             </a>
-         </div>
-         <div class="myImg field-item even">
-             <a href="http://api.o6144513180.v4.s1.chi.boa.io/sites/api.o6144513180.v4.s1.chi.boa.io/files/property_blueprints/depositphotos_11513959-stock-illustration-urban-blueprint-with-a-3d_0.jpg"
-                rel="lightbox[field_blueprint][]" title="" class="lightbox-processed">
-                 <img typeof="foaf:Image"
-                      src="http://api.o6144513180.v4.s1.chi.boa.io/sites/api.o6144513180.v4.s1.chi.boa.io/files/property_blueprints/depositphotos_11513959-stock-illustration-urban-blueprint-with-a-3d_0.jpg"
-                      width="1024" height="1024" alt="">
-             </a>
-         </div>
-     </div>
- </div>
+<div class="site_wrap wrap">
 
 
- <!-- The Modal -->
-<div id="myModal" class="modal">
+    <div class="img_slides_wrap slides_wrap wrap">
+        <img class="img_slide slide active" id="slide1" src="https://lh5.googleusercontent.com/-MShhyv4lWuM/T4Si18g0XsI/AAAAAAAAANU/Nnnxh68myRA/s768/Norway_201241.png"/>
+        <img class="img_slide slide" id="slide2" src="https://lh6.googleusercontent.com/-BED5h574s1Q/T4Sji7_hmOI/AAAAAAAAAO8/JMChDngsCDk/s768/Norway_201284.png"/>
+        <img class="img_slide slide" id="slide3" src="https://lh6.googleusercontent.com/-n31QkVB4M9c/T4SjckZM1TI/AAAAAAAAAOs/H26JyEo9970/s768/Norway_201276.png"/>
+        <img class="img_slide slide" id="slide4" src="https://lh6.googleusercontent.com/-jti_dD8mDiQ/T4ShY14T5HI/AAAAAAAAAKE/-jF6OT_zmb4/s768/Norway_2012102.png" />
+    </div>
 
-  <!-- The Close Button -->
-  <span class="close" onclick="document.getElementById('myModal').style.display='none'">&times;</span>
-
-  <!-- Modal Content (The Image) -->
-  <img class="modal-content" id="img01">
-
-  <!-- Modal Caption (Image Text) -->
-  <div id="caption"></div>
 </div>
 
- <script type="text/javascript" src="http://dev.api.o6144513180.v4.s1.chi.boa.io/sites/all/modules/jquery_update/replace/jquery/1.10/jquery.min.js?v=1.10.2"></script>
- <script type="text/javascript" src="jquery.event.move.js"></script>
- <script type="text/javascript" src="jquery.event.swipe.js"></script>
 
+<div class="field field-name-field-blueprint field-type-image field-label-hidden">
+    <div class="field-items">
+        <div class="myImg field-item even active">
+            <a href="http://api.o6144513180.v4.s1.chi.boa.io/sites/api.o6144513180.v4.s1.chi.boa.io/files/property_blueprints/blueprint_2.jpg"
+               rel="lightbox[field_blueprint][]" title="" class="lightbox-processed">
+                <img typeof="foaf:Image"
+                     src="http://api.o6144513180.v4.s1.chi.boa.io/sites/api.o6144513180.v4.s1.chi.boa.io/files/property_blueprints/blueprint_2.jpg"
+                     width="247" height="135" alt="">
+            </a>
+        </div>
+        <div class="myImg field-item odd">
+            <a href="http://api.o6144513180.v4.s1.chi.boa.io/sites/api.o6144513180.v4.s1.chi.boa.io/files/property_blueprints/depositphotos_11513959-stock-illustration-urban-blueprint-with-a-3d.jpg"
+               rel="lightbox[field_blueprint][]" title="" class="lightbox-processed">
+                <img typeof="foaf:Image"
+                     src="http://api.o6144513180.v4.s1.chi.boa.io/sites/api.o6144513180.v4.s1.chi.boa.io/files/property_blueprints/depositphotos_11513959-stock-illustration-urban-blueprint-with-a-3d.jpg"
+                     width="1024" height="1024" alt="">
+            </a>
+        </div>
+        <div class="myImg field-item even">
+            <a href="http://api.o6144513180.v4.s1.chi.boa.io/sites/api.o6144513180.v4.s1.chi.boa.io/files/property_blueprints/architectural-background-with-a-3d-building-model-vector-clip-art-kKLS3w-clipart.jpg"
+               rel="lightbox[field_blueprint][]" title="" class="lightbox-processed">
+                <img typeof="foaf:Image"
+                     src="http://api.o6144513180.v4.s1.chi.boa.io/sites/api.o6144513180.v4.s1.chi.boa.io/files/property_blueprints/architectural-background-with-a-3d-building-model-vector-clip-art-kKLS3w-clipart.jpg"
+                     width="450" height="470" alt="">
+            </a>
+        </div>
+        <div class="myImg field-item odd">
+            <a href="http://api.o6144513180.v4.s1.chi.boa.io/sites/api.o6144513180.v4.s1.chi.boa.io/files/property_blueprints/blueprint_2_2.jpg"
+               rel="lightbox[field_blueprint][]" title="" class="lightbox-processed">
+                <img typeof="foaf:Image"
+                     src="http://api.o6144513180.v4.s1.chi.boa.io/sites/api.o6144513180.v4.s1.chi.boa.io/files/property_blueprints/blueprint_2_2.jpg"
+                     width="247" height="135" alt="">
+            </a>
+        </div>
+        <div class="myImg field-item even">
+            <a href="http://api.o6144513180.v4.s1.chi.boa.io/sites/api.o6144513180.v4.s1.chi.boa.io/files/property_blueprints/depositphotos_11513959-stock-illustration-urban-blueprint-with-a-3d_0.jpg"
+               rel="lightbox[field_blueprint][]" title="" class="lightbox-processed">
+                <img typeof="foaf:Image"
+                     src="http://api.o6144513180.v4.s1.chi.boa.io/sites/api.o6144513180.v4.s1.chi.boa.io/files/property_blueprints/depositphotos_11513959-stock-illustration-urban-blueprint-with-a-3d_0.jpg"
+                     width="1024" height="1024" alt="">
+            </a>
+        </div>
+    </div>
+</div>
+
+
+<script type="text/javascript" src="http://dev.api.o6144513180.v4.s1.chi.boa.io/sites/all/modules/jquery_update/replace/jquery/1.10/jquery.min.js?v=1.10.2"></script>
+<script src="jquery.event.move.js"></script>
+<script src="jquery.event.swipe.js"></script>
 <script>
-    $(document).ready(function(){
-        // Get the modal
-        var modal = $('#myModal');
+    (function(jQuery, undefined) {
+        jQuery(document).ready(function() {
+            var wrap = jQuery('.field-items'),
+                    slides = wrap.find('.field-item'),
+                    active = slides.filter('.active'),
+                    buttons = jQuery('.slide_button'),
+                    i = slides.index(active),
+                    width = wrap.width();
 
-// Get the image and insert it inside the modal - use its "alt" text as a caption
-        var $imgs = $('.field-item img');
-        var modalImg = $("#img01");
-        var captionText = $("#caption");
-        $imgs.on('click', function(e){
-            modal.show();
-            modalImg.attr('src',$(this).attr('src'));
-            captionText.html($(this).attr('alt'));
-            return false;
-        })
+            // Listen for swipe events on slides, and use a custom 'activate'
+            // event to add and remove the class 'active' to the previous
+            // or next slide, and to keep the index up-to-date. The class
+            // 'active' uses CSS transitions to make the slide move.
 
-        $imgs.on('swipeleft', function(e){
-alert('swipe left')
-        })
+            slides
 
-        $imgs.on('swiperight', function(e){
-alert('swipe right')
-        })
+                    .on('swipeleft', function(e) {
+                        if (i === slides.length - 1) { return; }
+                        slides.eq(i + 1).trigger('activate');
+                    })
 
-        $('.close').on('click', function(){
-            modal.hide();
-        })
-    })
+                    .on('swiperight', function(e) {
+                        if (i === 0) { return; }
+                        slides.eq(i - 1).trigger('activate');
+                    })
 
+                    .on('activate', function(e) {
+                        slides.eq(i).removeClass('active');
+                        buttons.eq(i).removeClass('on');
 
+                        jQuery(e.target).addClass('active');
+
+                        // Update the active slide index
+                        i = slides.index(e.target);
+
+                        // select active class for slide button
+                        buttons.eq(i).addClass('on');
+                    })
+
+                // The code below handles what happens before any swipe event is triggered.
+                // It makes the slides demo on this page work nicely, but really doesn't
+                // have much to do with demonstrating the swipe events themselves. For more
+                // on move events see:
+                //
+                // http://stephband.info/jquery.event.move
+
+                    .on('movestart', function(e) {
+                        // If the movestart heads off in a upwards or downwards
+                        // direction, prevent it so that the browser scrolls normally.
+                        if ((e.distX > e.distY && e.distX < -e.distY) ||
+                                (e.distX < e.distY && e.distX > -e.distY)) {
+                            e.preventDefault();
+                            return;
+                        }
+
+                        // To allow the slide to keep step with the finger,
+                        // temporarily disable transitions.
+                        wrap.addClass('notransition');
+                    })
+
+                    .on('move', function(e) {
+                        var left = 100 * e.distX / width;
+
+                        // Move slides with the finger
+                        if (e.distX < 0) {
+                            if (slides[i+1]) {
+                                slides[i].style.left = left + '%';
+                                slides[i+1].style.left = (left+100)+'%';
+                            }
+                            else {
+                                slides[i].style.left = left/4 + '%';
+                            }
+                        }
+                        if (e.distX > 0) {
+                            if (slides[i-1]) {
+                                slides[i].style.left = left + '%';
+                                slides[i-1].style.left = (left-100)+'%';
+                            }
+                            else {
+                                slides[i].style.left = left/5 + '%';
+                            }
+                        }
+                    })
+
+                    .on('moveend', function(e) {
+                        wrap.removeClass('notransition');
+
+                        slides[i].style.left = '';
+
+                        if (slides[i+1]) {
+                            slides[i+1].style.left = '';
+                        }
+                        if (slides[i-1]) {
+                            slides[i-1].style.left = '';
+                        }
+                    });
+
+            // Make the buttons work, too. Hijack the id stored in the href and use
+            // it to activate the slide.
+
+            jQuery(document)
+                    .on('click', '.slide_button', function(e) {
+                        var href = e.currentTarget.hash;
+
+                        jQuery(href).trigger('activate');
+
+                        e.preventDefault();
+                    });
+        });
+    })(jQuery);
 </script>
 
- <script>
-    /* (function(jQuery, undefined) {
-         jQuery(document).ready(function() {
-             var wrap = jQuery('.field-items'),
-                     slides = wrap.find('.field-items img'),
-                     active = slides.filter('.active'),
-                     i = slides.index(active),
-                     width = wrap.width();
+<script>
+    (function(jQuery, undefined) {
+        jQuery(document).ready(function() {
+            var wrap = jQuery('.slides_wrap'),
+                    slides = wrap.find('.img_slide'),
+                    active = slides.filter('.active'),
+                    buttons = jQuery('.slide_button'),
+                    i = slides.index(active),
+                    width = wrap.width();
 
-             // Listen for swipe events on slides, and use a custom 'activate'
-             // event to add and remove the class 'active' to the previous
-             // or next slide, and to keep the index up-to-date. The class
-             // 'active' uses CSS transitions to make the slide move.
+            // Listen for swipe events on slides, and use a custom 'activate'
+            // event to add and remove the class 'active' to the previous
+            // or next slide, and to keep the index up-to-date. The class
+            // 'active' uses CSS transitions to make the slide move.
 
-             slides
+            slides
 
-                     .on('swipeleft', function(e) {
-                         alert('swipe left')
-                         if (i === slides.length - 1) { return; }
-                         slides.eq(i + 1).trigger('activate');
-                     })
+                    .on('swipeleft', function(e) {
+                        if (i === slides.length - 1) { return; }
+                        slides.eq(i + 1).trigger('activate');
+                    })
 
-                     .on('swiperight', function(e) {
-                         alert('swipe right')
-                         if (i === 0) { return; }
-                         slides.eq(i - 1).trigger('activate');
-                     })
+                    .on('swiperight', function(e) {
+                        if (i === 0) { return; }
+                        slides.eq(i - 1).trigger('activate');
+                    })
 
-                     .on('activate', function(e) {
-                         slides.eq(i).removeClass('active');
+                    .on('activate', function(e) {
+                        slides.eq(i).removeClass('active');
+                        buttons.eq(i).removeClass('on');
 
-                         jQuery(e.target).addClass('active');
+                        jQuery(e.target).addClass('active');
 
-                         // Update the active slide index
-                         i = slides.index(e.target);
-                     })
+                        // Update the active slide index
+                        i = slides.index(e.target);
 
-                 // The code below handles what happens before any swipe event is triggered.
-                 // It makes the slides demo on this page work nicely, but really doesn't
-                 // have much to do with demonstrating the swipe events themselves. For more
-                 // on move events see:
-                 //
-                 // http://stephband.info/jquery.event.move
+                        // select active class for slide button
+                        buttons.eq(i).addClass('on');
+                    })
 
-                     .on('movestart', function(e) {
-                         // If the movestart heads off in a upwards or downwards
-                         // direction, prevent it so that the browser scrolls normally.
-                         if ((e.distX > e.distY && e.distX < -e.distY) ||
-                                 (e.distX < e.distY && e.distX > -e.distY)) {
-                             e.preventDefault();
-                             return;
-                         }
+                // The code below handles what happens before any swipe event is triggered.
+                // It makes the slides demo on this page work nicely, but really doesn't
+                // have much to do with demonstrating the swipe events themselves. For more
+                // on move events see:
+                //
+                // http://stephband.info/jquery.event.move
 
-                         // To allow the slide to keep step with the finger,
-                         // temporarily disable transitions.
-                         wrap.addClass('notransition');
-                     })
+                    .on('movestart', function(e) {
+                        // If the movestart heads off in a upwards or downwards
+                        // direction, prevent it so that the browser scrolls normally.
+                        if ((e.distX > e.distY && e.distX < -e.distY) ||
+                                (e.distX < e.distY && e.distX > -e.distY)) {
+                            e.preventDefault();
+                            return;
+                        }
 
-                     .on('move', function(e) {
-                         var left = 100 * e.distX / width;
+                        // To allow the slide to keep step with the finger,
+                        // temporarily disable transitions.
+                        wrap.addClass('notransition');
+                    })
 
-                         // Move slides with the finger
-                         if (e.distX < 0) {
-                             if (slides[i+1]) {
-                                 slides[i].style.left = left + '%';
-                                 slides[i+1].style.left = (left+100)+'%';
-                             }
-                             else {
-                                 slides[i].style.left = left/4 + '%';
-                             }
-                         }
-                         if (e.distX > 0) {
-                             if (slides[i-1]) {
-                                 slides[i].style.left = left + '%';
-                                 slides[i-1].style.left = (left-100)+'%';
-                             }
-                             else {
-                                 slides[i].style.left = left/5 + '%';
-                             }
-                         }
-                     })
+                    .on('move', function(e) {
+                        var left = 100 * e.distX / width;
 
-                     .on('moveend', function(e) {
-                         wrap.removeClass('notransition');
+                        // Move slides with the finger
+                        if (e.distX < 0) {
+                            if (slides[i+1]) {
+                                slides[i].style.left = left + '%';
+                                slides[i+1].style.left = (left+100)+'%';
+                            }
+                            else {
+                                slides[i].style.left = left/4 + '%';
+                            }
+                        }
+                        if (e.distX > 0) {
+                            if (slides[i-1]) {
+                                slides[i].style.left = left + '%';
+                                slides[i-1].style.left = (left-100)+'%';
+                            }
+                            else {
+                                slides[i].style.left = left/5 + '%';
+                            }
+                        }
+                    })
 
-                         slides[i].style.left = '';
+                    .on('moveend', function(e) {
+                        wrap.removeClass('notransition');
 
-                         if (slides[i+1]) {
-                             slides[i+1].style.left = '';
-                         }
-                         if (slides[i-1]) {
-                             slides[i-1].style.left = '';
-                         }
-                     });
+                        slides[i].style.left = '';
 
-             // Make the buttons work, too. Hijack the id stored in the href and use
-             // it to activate the slide.
+                        if (slides[i+1]) {
+                            slides[i+1].style.left = '';
+                        }
+                        if (slides[i-1]) {
+                            slides[i-1].style.left = '';
+                        }
+                    });
 
-             jQuery(document)
-                     .on('click', '.slide_button', function(e) {
-                         var href = e.currentTarget.hash;
+            // Make the buttons work, too. Hijack the id stored in the href and use
+            // it to activate the slide.
 
-                         jQuery(href).trigger('activate');
+            jQuery(document)
+                    .on('click', '.slide_button', function(e) {
+                        var href = e.currentTarget.hash;
 
-                         e.preventDefault();
-                     });
-         });
-     })(jQuery);*/
- </script>
+                        jQuery(href).trigger('activate');
+
+                        e.preventDefault();
+                    });
+        });
+    })(jQuery);
+</script>
 </body>
 </html>
